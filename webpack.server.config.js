@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'none',
@@ -11,13 +12,14 @@ module.exports = {
   },
 
   /* my settings start */
-  //multi projects
-  externals: [/(node_modules|main\..*\.js)/],
   //add watching functionality
   watchOptions: {
     ignored: [/dist/, /node_modules/],
     poll: 1000
   },
+  externals: [nodeExternals({
+    whitelist: [/^@ng-bootstrap/, /^@auth0/, /^angular-froala-wysiwyg/]
+  })],
   //fix graphQL Error
   resolve: {
     extensions: ['.ts', '.mjs', '.js']
@@ -27,6 +29,7 @@ module.exports = {
 
 
   /* old settings start 
+  externals: [/(node_modules|main\..*\.js)/],
   externals: {
     './dist/server/main': 'require("./server/main")'
   },

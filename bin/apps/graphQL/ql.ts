@@ -9,6 +9,7 @@ import { buildSchema } from 'type-graphql';
 import { Article } from './entities/article.mongo.ql';
 import { ArticleResolver } from './resolvers/article.resolver';
 import { TypegooseMiddleware } from './typegoose-middleware';
+import { MemberResolver } from './resolvers/member.resolver';
 
 export class QLApp extends UniversalApp {
 	/* DataBase Connection */
@@ -33,7 +34,7 @@ export class QLApp extends UniversalApp {
 			});
 
 			const schema = await buildSchema({
-				resolvers: [ ArticleResolver ],
+				resolvers: [ ArticleResolver, MemberResolver ],
 				globalMiddlewares: [ TypegooseMiddleware ]
 			});
 
