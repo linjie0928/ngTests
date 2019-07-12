@@ -4,6 +4,20 @@
     "codelyzer"
   ],
   "rules": {
+    "align": [false, "parameters", "statements"],
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ]
+    },
+    "indent": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+
+
+
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
