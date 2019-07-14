@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "curly": [true, "ignore-same-line"],
     "align": [false, "parameters", "statements"],
     "variable-name": {
       "options": [
@@ -15,9 +16,6 @@
     },
     "indent": false,
     "semicolon": [true, "always", "ignore-bound-class-methods"],
-
-
-
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {

@@ -1,5 +1,5 @@
 import { InputType, Field } from 'type-graphql';
-import Member from '../../entities/member.mongo.ql';
+import { Member } from '../../entities/member.mongo.ql';
 
 @InputType()
 export class SignupInput implements Partial<Member> {
