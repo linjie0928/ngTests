@@ -48,7 +48,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
-    "type-graphql": "^0.17.4",
+    "type-graphql": "^0.17.6",
     "typedi": "^0.8.0",
     "typegoose": "^5.7.2",
     "vhost": "^3.0.2",
